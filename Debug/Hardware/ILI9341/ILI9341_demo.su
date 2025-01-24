@@ -1,0 +1,8 @@
+../Hardware/ILI9341/ILI9341_demo.c:15:6:PERFORMANCE_TEST	80	static
+../Hardware/ILI9341/ILI9341_demo.c:64:6:COUNTING_MULTIPLE_SEGMENTS	32	static
+../Hardware/ILI9341/ILI9341_demo.c:90:6:COUNTING_SINGLE_SEGMENT	32	static
+../Hardware/ILI9341/ILI9341_demo.c:105:6:ALIGNMENT_TEST	16	static
+../Hardware/ILI9341/ILI9341_demo.c:282:6:INDIVIDUAL_PIXEL_EXAMPLE1	24	static
+../Hardware/ILI9341/ILI9341_demo.c:351:6:COLOUR_EXAMPLE	32	static
+../Hardware/ILI9341/ILI9341_demo.c:377:6:SnowTiger	24	static
+../Hardware/ILI9341/ILI9341_demo.c:389:6:Touchscreen_Demo	80	static
