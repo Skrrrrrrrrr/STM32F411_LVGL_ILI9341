@@ -1,7 +1,0 @@
-../Core/Src/usart.c:32:6:MX_USART1_UART_Init	8	static
-../Core/Src/usart.c:60:6:HAL_UART_MspInit	48	static
-../Core/Src/usart.c:112:6:HAL_UART_MspDeInit	8	static
-../Core/Src/usart.c:151:10:calculateStringLength	0	static
-../Core/Src/usart.c:188:6:USART1_TX_DMA_String	16	static
-../Core/Src/usart.c:211:5:USART1_Printf	24	static
-../Core/Src/usart.c:237:6:HAL_UART_TxCpltCallback	0	static
