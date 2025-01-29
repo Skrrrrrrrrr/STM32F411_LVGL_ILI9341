@@ -9,10 +9,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
 -include Hardware/ILI9341/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
@@ -65,8 +61,8 @@ all: main-build
 main-build: STM32F411_LVGL_ILI9341.elf secondary-outputs
 
 # Tool invocations
-STM32F411_LVGL_ILI9341.elf STM32F411_LVGL_ILI9341.map: $(OBJS) $(USER_OBJS) E:\Workspace\STM32CubeIDE\STM32F411_LVGL_ILI9341\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32F411_LVGL_ILI9341.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\Workspace\STM32CubeIDE\STM32F411_LVGL_ILI9341\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F411_LVGL_ILI9341.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+STM32F411_LVGL_ILI9341.elf STM32F411_LVGL_ILI9341.map: $(OBJS) $(USER_OBJS) E:\Download\longriver\STM32F411_LVGL_ILI9341\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM32F411_LVGL_ILI9341.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\Download\longriver\STM32F411_LVGL_ILI9341\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F411_LVGL_ILI9341.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
