@@ -113,16 +113,16 @@ int main(void)
     /* USER CODE BEGIN 3 */
 		HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
 		HAL_Delay(1000);
-//		PERFORMANCE_TEST();
-		COUNTING_MULTIPLE_SEGMENTS();
+		PERFORMANCE_TEST();
+//		COUNTING_MULTIPLE_SEGMENTS();
 //		COLOUR_EXAMPLE();
 //		ILI9341_Fill_Screen(RED);
 //		HAL_GPIO_TogglePin(LCD_CS_GPIO_Port, LCD_CS_PIN);
 //		HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_PIN, GPIO_PIN_SET);
 
-		HAL_Delay(1000);
-		USART1_Printf("%d : LCD ID:%d\r\n", ILI9341_RedeID());
-		HAL_Delay(1000);
+//		HAL_Delay(1000);
+//		USART1_Printf("%d : LCD ID:%d\r\n", ILI9341_RedeID());
+//		HAL_Delay(1000);
 
 	}
   /* USER CODE END 3 */
