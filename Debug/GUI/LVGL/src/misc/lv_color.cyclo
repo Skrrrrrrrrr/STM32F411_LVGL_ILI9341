@@ -1,0 +1,11 @@
+../GUI/LVGL/src/misc/lv_color.h:439:48:lv_color_mix	1
+../GUI/LVGL/src/misc/lv_color.c:36:28:lv_color_fill	4
+../GUI/LVGL/src/misc/lv_color.c:126:12:lv_color_lighten	1
+../GUI/LVGL/src/misc/lv_color.c:131:12:lv_color_darken	1
+../GUI/LVGL/src/misc/lv_color.c:136:12:lv_color_change_lightness	3
+../GUI/LVGL/src/misc/lv_color.c:151:12:lv_color_hsv_to_rgb	7
+../GUI/LVGL/src/misc/lv_color.c:216:16:lv_color_rgb_to_hsv	9
+../GUI/LVGL/src/misc/lv_color.c:267:16:lv_color_to_hsv	1
+../GUI/LVGL/src/misc/lv_color.c:274:12:lv_palette_main	2
+../GUI/LVGL/src/misc/lv_color.c:293:12:lv_palette_lighten	3
+../GUI/LVGL/src/misc/lv_color.c:332:12:lv_palette_darken	3
