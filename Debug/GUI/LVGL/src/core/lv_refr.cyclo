@@ -8,5 +8,7 @@
 ../GUI/LVGL/src/core/lv_refr.c:206:6:_lv_inv_area	14
 ../GUI/LVGL/src/core/lv_refr.c:267:13:_lv_refr_get_disp_refreshing	1
 ../GUI/LVGL/src/core/lv_refr.c:278:6:_lv_refr_set_disp_refreshing	1
-../GUI/LVGL/src/core/lv_refr.c:287:6:_lv_disp_refr_timer	45
+../GUI/LVGL/src/core/lv_refr.c:287:6:_lv_disp_refr_timer	53
 ../GUI/LVGL/src/core/lv_refr.c:113:6:lv_refr_now	5
+../GUI/LVGL/src/core/lv_refr.c:455:6:lv_refr_reset_fps_counter	1
+../GUI/LVGL/src/core/lv_refr.c:461:10:lv_refr_get_fps_avg	2

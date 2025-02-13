@@ -95,7 +95,14 @@ GUI/LVGL/src/core/lv_refr.o: ../GUI/LVGL/src/core/lv_refr.c \
  ../GUI/LVGL/src/core/../font/lv_font.h \
  ../GUI/LVGL/src/core/../extra/others/snapshot/lv_snapshot.h \
  ../GUI/LVGL/src/core/../extra/others/snapshot/../../../lv_conf_internal.h \
- ../GUI/LVGL/src/core/../extra/others/snapshot/../../../core/lv_obj.h
+ ../GUI/LVGL/src/core/../extra/others/snapshot/../../../core/lv_obj.h \
+ ../GUI/LVGL/src/core/../widgets/lv_label.h \
+ ../GUI/LVGL/src/core/../widgets/../lv_conf_internal.h \
+ ../GUI/LVGL/src/core/../widgets/../core/lv_obj.h \
+ ../GUI/LVGL/src/core/../widgets/../font/lv_font.h \
+ ../GUI/LVGL/src/core/../widgets/../font/lv_symbol_def.h \
+ ../GUI/LVGL/src/core/../widgets/../misc/lv_txt.h \
+ ../GUI/LVGL/src/core/../widgets/../draw/lv_draw.h
 ../GUI/LVGL/src/core/lv_refr.h:
 ../GUI/LVGL/src/core/lv_obj.h:
 ../GUI/LVGL/src/core/../lv_conf_internal.h:
@@ -198,3 +205,10 @@ E:/Workspace/STM32CubeIDE/STM32F411_LVGL_ILI9341/GUI/LVGL/lv_conf.h:
 ../GUI/LVGL/src/core/../extra/others/snapshot/lv_snapshot.h:
 ../GUI/LVGL/src/core/../extra/others/snapshot/../../../lv_conf_internal.h:
 ../GUI/LVGL/src/core/../extra/others/snapshot/../../../core/lv_obj.h:
+../GUI/LVGL/src/core/../widgets/lv_label.h:
+../GUI/LVGL/src/core/../widgets/../lv_conf_internal.h:
+../GUI/LVGL/src/core/../widgets/../core/lv_obj.h:
+../GUI/LVGL/src/core/../widgets/../font/lv_font.h:
+../GUI/LVGL/src/core/../widgets/../font/lv_symbol_def.h:
+../GUI/LVGL/src/core/../widgets/../misc/lv_txt.h:
+../GUI/LVGL/src/core/../widgets/../draw/lv_draw.h:

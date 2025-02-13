@@ -10,3 +10,5 @@
 ../GUI/LVGL/src/core/lv_refr.c:278:6:_lv_refr_set_disp_refreshing	0	static
 ../GUI/LVGL/src/core/lv_refr.c:287:6:_lv_disp_refr_timer	128	static
 ../GUI/LVGL/src/core/lv_refr.c:113:6:lv_refr_now	8	static
+../GUI/LVGL/src/core/lv_refr.c:455:6:lv_refr_reset_fps_counter	0	static
+../GUI/LVGL/src/core/lv_refr.c:461:10:lv_refr_get_fps_avg	0	static

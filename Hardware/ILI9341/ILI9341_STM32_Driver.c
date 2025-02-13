@@ -473,11 +473,9 @@ void ILI9341_Draw_Vertical_Line(uint16_t X, uint16_t Y, uint16_t Height,
 	ILI9341_Draw_Colour_Burst(Colour, Height);
 }
 
-
-
 uint16_t ILI9341_RedeID() {
 
-	uint8_t temp[2] = {0};
+	uint8_t temp[2] = { 0 };
 
 	ILI9341_Write_Command(0xD3);
 
@@ -487,6 +485,5 @@ uint16_t ILI9341_RedeID() {
 	HAL_SPI_TransmitReceive(LCD_SPI, 0x00, temp, 1, 1);
 	HAL_SPI_TransmitReceive(LCD_SPI, 0x00, &temp[1], 1, 1);
 
-
-	return temp[0]<<8|temp[1];
+	return temp[0] << 8 | temp[1];
 }

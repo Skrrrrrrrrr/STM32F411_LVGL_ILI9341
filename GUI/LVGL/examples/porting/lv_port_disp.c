@@ -164,7 +164,7 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 {
     if(disp_flush_enabled) {
         /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one*/
-#if 0
+#if 1
         int32_t x;
         int32_t y;
         for(y = area->y1; y <= area->y2; y++) {

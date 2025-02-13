@@ -14,4 +14,4 @@
 ../Hardware/ILI9341/ILI9341_STM32_Driver.c:438:6:ILI9341_Draw_Rectangle	24	static
 ../Hardware/ILI9341/ILI9341_STM32_Driver.c:453:6:ILI9341_Draw_Horizontal_Line	16	static
 ../Hardware/ILI9341/ILI9341_STM32_Driver.c:465:6:ILI9341_Draw_Vertical_Line	16	static
-../Hardware/ILI9341/ILI9341_STM32_Driver.c:478:10:ILI9341_RedeID	32	static
+../Hardware/ILI9341/ILI9341_STM32_Driver.c:476:10:ILI9341_RedeID	32	static
