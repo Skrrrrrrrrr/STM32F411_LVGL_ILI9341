@@ -1,0 +1,2 @@
+../GUI/LVGL/examples/porting/lv_port_indev.c:364:13:button_read	0	static
+../GUI/LVGL/examples/porting/lv_port_indev.c:70:6:lv_port_indev_init	8	static

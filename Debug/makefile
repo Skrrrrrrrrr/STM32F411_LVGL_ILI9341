@@ -10,6 +10,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Hardware/ILI9341/subdir.mk
+-include Hardware/Button/subdir.mk
 -include GUI/LVGL/src/widgets/subdir.mk
 -include GUI/LVGL/src/misc/subdir.mk
 -include GUI/LVGL/src/hal/subdir.mk
@@ -73,6 +74,9 @@ RM := rm -rf
 -include GUI/LVGL/demos/keypad_encoder/subdir.mk
 -include GUI/LVGL/demos/benchmark/assets/subdir.mk
 -include GUI/LVGL/demos/benchmark/subdir.mk
+-include GUI/LVGL/GUI/generated/guider_fonts/subdir.mk
+-include GUI/LVGL/GUI/generated/subdir.mk
+-include GUI/LVGL/GUI/custom/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

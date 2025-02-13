@@ -25,6 +25,9 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
+GUI/LVGL/GUI/custom \
+GUI/LVGL/GUI/generated \
+GUI/LVGL/GUI/generated/guider_fonts \
 GUI/LVGL/demos/benchmark/assets \
 GUI/LVGL/demos/benchmark \
 GUI/LVGL/demos/keypad_encoder \
@@ -88,5 +91,6 @@ GUI/LVGL/src/font \
 GUI/LVGL/src/hal \
 GUI/LVGL/src/misc \
 GUI/LVGL/src/widgets \
+Hardware/Button \
 Hardware/ILI9341 \
 

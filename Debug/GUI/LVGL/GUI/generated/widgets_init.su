@@ -1,0 +1,2 @@
+../GUI/LVGL/GUI/generated/widgets_init.c:16:30:kb_event_cb	16	static
+../GUI/LVGL/GUI/generated/widgets_init.c:24:30:ta_event_cb	16	static
