@@ -34,8 +34,9 @@
 #include "button.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
-#include "gui_guider.h"           // Gui Guider 生成的界面和控件的声�?????
-#include "events_init.h"          // Gui Guider 生成的初始化事件、回调函�?????
+#include "gui_guider.h"           // Gui Guider 生成的界面和控件的声�????????
+#include "events_init.h"          // Gui Guider 生成的初始化事件、回调函�????????
+#include "custom.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -108,28 +109,19 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
 	ILI9341_Init(); //initial driver setup to drive ili9341
-//	ILI9341_Set_Rotation(SCREEN_HORIZONTAL_2);
+	ILI9341_Set_Rotation(SCREEN_HORIZONTAL_1);
 	HAL_Delay(1000);
 	HAL_GPIO_WritePin(LCD_BLK_GPIO_Port, LCD_BLK_Pin, GPIO_PIN_SET);
 
-//	lv_init();
-//	lv_port_disp_init();
-//	lv_port_indev_init();
-//
-//	lv_obj_t *container = lv_obj_create(lv_scr_act());
-//	lv_obj_set_size(container, 320, 240);
-//	lv_obj_center(container);
-//
-//	lv_obj_t *button = lv_btn_create(container);
-//	lv_obj_set_size(button, 20, 20);
-//	lv_obj_set_pos(button, 0, 0);
-//	lv_obj_add_event_cb(button, Button_Event_Callback, LV_EVENT_ALL, NULL);
+	lv_init();
+	lv_port_disp_init();
+	lv_port_indev_init();
 
 	__HAL_TIM_CLEAR_IT(&htim10, TIM_IT_UPDATE);
 	HAL_TIM_Base_Start_IT(&htim10); //使能LVGL心跳时钟
 
-//	setup_ui(&guider_ui);           // 初始�????? UI
-//	events_init(&guider_ui);       // 初始�????? 事件
+	setup_ui(&guider_ui);           // 初始�???????? UI
+	events_init(&guider_ui);       // 初始�???????? 事件
 
   /* USER CODE END 2 */
 
@@ -139,20 +131,20 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//		HAL_Delay(1 - 1);
-//		static uint16_t led_time = 0;
-//		if (led_time++ > 1000) {
-//			HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-//			led_time = 0;
-//		}
+		HAL_Delay(1 - 1);
+		static uint16_t led_time = 0;
+		if (led_time++ >= 1000) {
+			HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+			led_time = 0;
+		}
 //		static uint16_t lcd_time = 0;
 //		if (lcd_time++ > 1000) {
 //			PERFORMANCE_TEST();
 //			lcd_time = 0;
 //		}
 //		HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-		HAL_Delay(1000);
-		PERFORMANCE_TEST();
+//		HAL_Delay(1000);
+//		PERFORMANCE_TEST();
 //		COUNTING_MULTIPLE_SEGMENTS();
 //		COLOUR_EXAMPLE();
 //		ILI9341_Fill_Screen(RED);
@@ -162,10 +154,11 @@ int main(void)
 //		USART1_Printf("%d : LCD ID:%d\r\n", ILI9341_RedeID());
 //		HAL_Delay(1000);
 //		static uint16_t gui_time = 0;
-//		if (gui_time++ > 5) {
-//			lv_timer_handler(); /* LVGL计时�????? */
+//		if (gui_time++ > 10) {
+//			lv_timer_handler(); /* LVGL计时�???????? */
 //			gui_time = 0;
 //		}
+//		lv_timer_handler();
 	}
   /* USER CODE END 3 */
 }
@@ -191,8 +184,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 12;
-  RCC_OscInitStruct.PLL.PLLN = 96;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 100;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
@@ -209,7 +202,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
   {
     Error_Handler();
   }
@@ -217,22 +210,22 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-	static uint16_t led_time = 0; //心跳�?????
+//	static uint16_t led_time = 0; //心跳�????????
 	if (htim->Instance == TIM10) {
 		lv_tick_inc(1);
-		if (led_time++ >= 1000) {
-			HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-			led_time = 0;
-		}
+//		if (led_time++ >= 1000) {
+//			HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+//			led_time = 0;
+//		}
 	}
 }
 
 void Button_Event_Callback(lv_event_t *event) {
-	lv_obj_t *btn = lv_event_get_target(event);              // 获得调用这个回调函数的对�?????
+	lv_obj_t *btn = lv_event_get_target(event);          // 获得调用这个回调函数的对�????????
 //	if (event->code == LV_EVENT_CLICKED) {
 //		static uint8_t cnt = 0;
 //		cnt++;
-//		lv_obj_t *label = lv_obj_get_child(btn, NULL); // 获取�?????1个子对象(我们在设计时，已安排了它的第1个子对象是一个label对象)
+//		lv_obj_t *label = lv_obj_get_child(btn, NULL); // 获取�????????1个子对象(我们在设计时，已安排了它的第1个子对象是一个label对象)
 //		lv_label_set_text_fmt(label, "Button: %d", cnt);   // 设置标签的文本，写法类似printf
 //	}
 }

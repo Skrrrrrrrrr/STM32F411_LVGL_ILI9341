@@ -1,9 +1,1 @@
-../GUI/LVGL/GUI/generated/events_init.c:38:13:screen_poweron_event_handler	0	static
-../GUI/LVGL/GUI/generated/events_init.c:19:13:screen_mainboard_btn_settings_event_handler	32	static
-../GUI/LVGL/GUI/generated/events_init.c:51:13:screen_poweron_bar_1_event_handler	32	static
-../GUI/LVGL/GUI/generated/events_init.c:71:13:screen_settings_btn_1_event_handler	32	static
-../GUI/LVGL/GUI/generated/events_init.c:85:13:screen_settings_btn_2_event_handler	0	static
-../GUI/LVGL/GUI/generated/events_init.c:33:6:events_init_screen_mainboard	0	static
-../GUI/LVGL/GUI/generated/events_init.c:65:6:events_init_screen_poweron	16	static
-../GUI/LVGL/GUI/generated/events_init.c:99:6:events_init_screen_settings	16	static
-../GUI/LVGL/GUI/generated/events_init.c:106:6:events_init	0	static
+../GUI/LVGL/GUI/generated/events_init.c:20:6:events_init	0	static

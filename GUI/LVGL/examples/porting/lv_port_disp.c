@@ -176,7 +176,7 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
             }
         }
 #else
-    ILI9341_Draw_Rectangle(area->x1,area->y1,area->x2-area->x1,area->y2-area->y1,color_p->full);
+    ILI9341_Draw_Rectangle(area->x1,area->y1,area->x2,area->y2,color_p->full);
 #endif
     }
 
